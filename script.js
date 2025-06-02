@@ -315,3 +315,21 @@ class SudokuGame {
         statusElement.className = `status ${type}`;
     }
 }
+
+let game;
+
+function newGame() {
+    game.newGame();
+}
+
+function validatePuzzle() {
+    game.validatePuzzle();
+}
+
+function solvePuzzle() {
+    game.solvePuzzle();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    game = new SudokuGame();
+});
