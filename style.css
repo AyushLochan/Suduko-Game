@@ -77,3 +77,152 @@ button:hover {
     gap: 10px;
     margin-bottom: 20px;
 }
+
+.difficulty button {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.difficulty button.active {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    color: white;
+}
+
+.sudoku-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 2px;
+    background: #333;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cell {
+    width: 45px;
+    height: 45px;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background: white;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.cell:nth-child(3n):not(:nth-child(9n)) {
+    border-right: 3px solid #333;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 3px solid #333;
+}
+
+.cell:hover {
+    background: #e3f2fd;
+    transform: scale(1.05);
+}
+
+.cell:focus {
+    background: #bbdefb;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+}
+
+.cell.given {
+    background: #f5f5f5;
+    color: #333;
+    font-weight: 900;
+}
+
+.cell.error {
+    background: #ffebee;
+    color: #d32f2f;
+    animation: shake 0.5s ease-in-out;
+}
+
+.cell.solved {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+.status.success {
+    color: #4caf50;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.status.error {
+    color: #f44336;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.timer {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .cell {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}
