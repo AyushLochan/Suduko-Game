@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧩 Sudoku Master</h1>
+
+        <div class="timer" id="timer">00:00</div>
+
+        <div class="difficulty">
+            <button class="btn-secondary active" data-difficulty="easy">Easy</button>
+            <button class="btn-secondary" data-difficulty="medium">Medium</button>
+            <button class="btn-secondary" data-difficulty="hard">Hard</button>
+        </div>
+
+        <div class="controls">
+            <button class="btn-primary" onclick="newGame()">New Game</button>
+            <button class="btn-secondary" onclick="validatePuzzle()">Check</button>
+            <button class="btn-success" onclick="solvePuzzle()">Solve</button>
+        </div>
+
+        <div class="sudoku-container">
+            <div class="sudoku-grid" id="sudoku-grid"></div>
+        </div>
+
+        <div class="status" id="status"></div>
+    </div>
+
+</body>
+
+</html>
