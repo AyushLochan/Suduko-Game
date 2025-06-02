@@ -281,4 +281,37 @@ class SudokuGame {
             }
         }
     }
+
+    clearErrors() {
+        document.querySelectorAll('.cell').forEach(cell => {
+            cell.classList.remove('error');
+        });
+    }
+
+    startTimer() {
+        this.startTime = Date.now();
+        this.stopTimer();
+
+        this.timerInterval = setInterval(() => {
+            const elapsed = Date.now() - this.startTime;
+            const minutes = Math.floor(elapsed / 60000);
+            const seconds = Math.floor((elapsed % 60000) / 1000);
+
+            document.getElementById('timer').textContent =
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }, 1000);
+    }
+
+    stopTimer() {
+        if (this.timerInterval) {
+            clearInterval(this.timerInterval);
+            this.timerInterval = null;
+        }
+    }
+
+    updateStatus(message, type = '') {
+        const statusElement = document.getElementById('status');
+        statusElement.textContent = message;
+        statusElement.className = `status ${type}`;
+    }
 }
