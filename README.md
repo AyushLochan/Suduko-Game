@@ -48,3 +48,6 @@ start index.html  # For Windows
 # OR
 xdg-open index.html  # For Linux
 ```
+
+## 📷 Screenshots
+(You can add screenshots here showing gameplay, UI, etc.)
