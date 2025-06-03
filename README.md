@@ -1,7 +1,3 @@
-Here's a sample `README.md` file for your **Sudoku Game** project. This includes sections like description, features, technologies used, and how to run the game.
-
----
-
 # 🧩 Sudoku Game
 
 A simple and interactive web-based Sudoku game built with HTML, CSS, and JavaScript.
@@ -26,3 +22,29 @@ A simple and interactive web-based Sudoku game built with HTML, CSS, and JavaScr
 * HTML5
 * CSS3
 * JavaScript (Vanilla JS)
+
+---
+
+## 🛠️ How to Run Locally
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/ayushlochan/Suduko-Game.git
+```
+
+2. Navigate into the project directory:
+
+```bash
+cd Suduko-Game
+```
+
+3. Open `index.html` in your browser:
+
+```bash
+open index.html  # For macOS
+# OR
+start index.html  # For Windows
+# OR
+xdg-open index.html  # For Linux
+```
