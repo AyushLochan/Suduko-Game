@@ -50,4 +50,5 @@ xdg-open index.html  # For Linux
 ```
 
 ## 📷 Screenshots
-(You can add screenshots here showing gameplay, UI, etc.)
+![image](https://github.com/user-attachments/assets/14ed24cc-1efe-478c-9cbf-e2097188f7e1)
+
