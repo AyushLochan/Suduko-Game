@@ -51,4 +51,3 @@ xdg-open index.html  # For Linux
 
 ## 📷 Screenshots
 ![image](https://github.com/user-attachments/assets/14ed24cc-1efe-478c-9cbf-e2097188f7e1)
-
